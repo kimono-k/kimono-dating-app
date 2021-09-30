@@ -38,6 +38,9 @@ Beveiliging:
 -- OWASP top 10
 
 Schakelen van status met button in lijst bijvoorbeeld aan/uit, actief/niet actief:
+
+sexuele orientatie weglaten
+
 -- MOET via een post
 -- MOET naar aparte action in een controller
 -- Mag ook via Ajax

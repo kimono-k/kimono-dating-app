@@ -38,8 +38,8 @@
         <ul class="list nav__list collapsible__content">
             <li class="nav__item"><a href="#">About</a></li>
             <li class="nav__item"><a href="#">Success Stories</a></li>
-            <li class="nav__item"><a href="#">Login</a></li>
-            <li class="nav__item"><a href="#">Register</a></li>
+            <li class="nav__item"><a href="/login">Login</a></li>
+            <li class="nav__item"><a href="/register">Register</a></li>
         </ul>
     </nav>
 </header>
