@@ -50,9 +50,23 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'username' => ['required', 'string', 'max:255'],
+            'password' => ['required', 'string'],
+            'first_name' => ['required', 'string'],
+            'last_name' => ['required', 'string'],
+            'email' => ['required', 'string'],
+            'country' => ['required', 'string'],
+            'province' => ['required', 'string'],
+            'date_of_birth' => ['required'],
+            'gender' => ['required', 'string'],
+            'sexual_orientation' => ['required', 'string'],
+            'preference' => ['required', 'string'],
+            'university' => ['required', 'string'],
+            'passions' => ['required', 'string'],
+            'user_picture' => ['required', 'string'],
+            'about_me' => ['required', 'string'],
+            'likes' => ['required', 'numeric'],
+            'likes_given' => ['required', 'numeric'],
         ]);
     }
 
@@ -65,9 +79,23 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
+            'username' => $data['username'],
             'password' => Hash::make($data['password']),
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
+            'email' => $data['email'],
+            'country' => $data['country'],
+            'province' => $data['province'],
+            'date_of_birth' => $data['date_of_birth'],
+            'gender' => $data['gender'],
+            'sexual_orientation' => $data['sexual_orientation'],
+            'preference' => $data['preference'],
+            'university' => $data['university'],
+            'passions' => $data['passions'],
+            'user_picture' => $data['user_picture'],
+            'about_me' => $data['about_me'],
+            'likes' => $data['likes'],
+            'likes_given' => $data['likes_given']
         ]);
     }
 }
