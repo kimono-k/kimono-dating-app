@@ -63,10 +63,10 @@ class RegisterController extends Controller
             'preference' => ['required', 'string'],
             'university' => ['required', 'string'],
             'passions' => ['required', 'string'],
-            'user_picture' => ['required', 'string'],
-            'about_me' => ['required', 'string'],
-            'likes' => ['required', 'numeric'],
-            'likes_given' => ['required', 'numeric'],
+            'user_picture' => ['required', 'mimes:jpg, png'],
+            'about_me' => ['required', 'string']
+            //'likes' => ['required', 'numeric'],
+            //'likes_given' => ['required', 'numeric'],
         ]);
     }
 
@@ -93,9 +93,9 @@ class RegisterController extends Controller
             'university' => $data['university'],
             'passions' => $data['passions'],
             'user_picture' => $data['user_picture'],
-            'about_me' => $data['about_me'],
-            'likes' => $data['likes'],
-            'likes_given' => $data['likes_given']
+            'about_me' => $data['about_me']
+            // 'likes' => $data['likes'],
+            // 'likes_given' => $data['likes_given']
         ]);
     }
 }
